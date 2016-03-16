@@ -2,7 +2,6 @@ package com.xd.customvpswitchanim;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewPager mViewPager;
+    private MyCustomViewPager mViewPager;
     private List<ImageView> mImageViews = new ArrayList<>();
     private CustomViewPager mCustomViewPager;
 
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mViewPager = (ViewPager) findViewById(R.id.vp);
+        mViewPager = (MyCustomViewPager) findViewById(R.id.vp);
         initDatas();
         mViewPager.setPageTransformer(false, new DepthPageTransformer());
     }
