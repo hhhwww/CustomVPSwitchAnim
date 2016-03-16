@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.vp);
         initDatas();
-
+        mViewPager.setPageTransformer(false, new DepthPageTransformer());
     }
 
     private void initDatas() {
