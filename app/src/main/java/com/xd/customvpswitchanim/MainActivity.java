@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager = (MyCustomViewPager) findViewById(R.id.vp);
         initDatas();
-        mViewPager.setPageTransformer(false, new DepthPageTransformer());
+        mViewPager.setPageTransformer(false, new RotatePageTransformer());
     }
 
     private void initDatas() {
